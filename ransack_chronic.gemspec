@@ -1,7 +1,5 @@
-# -*- encoding: utf-8 -*-
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ransack_chronic/version'
+# encoding: utf-8
+require_relative 'lib/ransack_chronic/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "ransack_chronic"
@@ -10,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["nathan.f77@gmail.com"]
   gem.description   = %q{Parse time/date natural language query strings with Chronic}
   gem.summary       = %q{Parse time/date query strings with Chronic}
-  gem.homepage      = ""
+  gem.homepage      = "https://github.com/ndbroadbent/ransack_chronic"
   gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($/)
@@ -18,5 +16,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency 'chronic', '>= 0.6.7'
+  gem.add_dependency 'chronic', '~> 0.10.2', '>= 0.10.2'
+  gem.add_dependency 'ransack', '~> 4.0'
 end
